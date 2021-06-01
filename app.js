@@ -11,6 +11,7 @@ const userRouter = require(__dirname + '/router/user.js')//引用usermo块请求
 app.use('*', (req, res, next) => {//应用中间件处理跨域问题
     //设置允许跨域的域名，*代表允许任意域名跨域
     res.setHeader("Access-Control-Allow-Origin", "*")
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 })
 
